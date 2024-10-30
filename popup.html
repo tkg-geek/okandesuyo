@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>オカンをセット</title>
+    <script src="popup.js" defer></script>
+    <style>
+      body {
+        width: 200px; /* ポップアップの幅を指定 */
+        font-family: Arial, sans-serif;
+        margin: 10px;
+        padding: 0;
+        display: flex;
+        flex-direction: column; /* 縦に並べる */
+        align-items: center; /* 中央揃え */
+      }
+      h1 {
+        font-size: 20px; /* ヘッダーのサイズを調整 */
+        text-align: center; /* ヘッダーを中央揃え */
+      }
+      .input-group {
+        display: flex;
+        justify-content: center; /* 中央揃え */
+        margin-bottom: 10px; /* 各入力欄の下にマージンを追加 */
+        width: 100%; /* グループの幅を100%に */
+      }
+      label {
+        margin-right: 5px; /* ラベルと入力欄の間にスペースを追加 */
+      }
+      input[type="number"] {
+        width: 50px; /* 入力欄の幅を指定 */
+        margin-left: 5px; /* ラベルとの間隔を設定 */
+      }
+      #start {
+        display: block;
+        margin: 10px auto; /* ボタンを中央揃え */
+        padding: 10px 20px; /* パディングを設定 */
+        background-color: #e468d8; /* 薄い紫色の背景 */
+        color: #fff; /* テキストの色を黒に設定 */
+        border: none; /* ボーダーを削除 */
+        border-radius: 5px; /* 角を丸く */
+        cursor: pointer; /* カーソルをポインタに */
+        font-size: 16px; /* フォントサイズを調整 */
+        transition: background-color 0.3s; /* ホバー時のトランジション */
+      }
+      #start:hover {
+        background-color: #800080; /* ホバー時の濃い紫 */
+        color: white; /* ホバー時のテキスト色を白に */
+      }
+      #countdown {
+        text-align: center; /* カウントダウンを中央揃え */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <img
+        src="img/icon48.png"
+        alt="Okan Icon"
+        style="vertical-align: middle; width: 32px; height: 32px"
+      />
+      <br />
+      オカンをセット
+    </h1>
+
+    <div class="input-group">
+      <label for="hours">時間:</label>
+      <input type="number" id="hours" min="0" />
+    </div>
+
+    <div class="input-group">
+      <label for="minutes">分:</label>
+      <input type="number" id="minutes" min="0" />
+    </div>
+
+    <div class="input-group">
+      <label for="seconds">秒:</label>
+      <input type="number" id="seconds" min="0" max="59" />
+    </div>
+
+    <button id="start">スタート</button>
+
+    <div id="countdown">残り時間: 0時間 0分 0秒</div>
+    <!-- カウントダウン表示 -->
+  </body>
+</html>
