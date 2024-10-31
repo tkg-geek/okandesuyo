@@ -13,18 +13,17 @@ function startTimer(duration) {
   countdownInterval = setInterval(() => {
     if (remainingTime <= 0) {
       clearInterval(countdownInterval);
-      showImage(3); // 残り時間が0になったときの画像
+      showImage(3); //ファイナルオカン
       return;
     }
 
-    // 残り時間によって異なる画像を表示
-    if (remainingTime === 20) {
-      showImage(1); // 残り時間が20秒のときの画像
-    } else if (remainingTime === 10) {
-      showImage(2); // 残り時間が10秒のときの画像
+    if (remainingTime === 30) {
+      showImage(1); // オカン1号
+    } else if (remainingTime === 15) {
+      showImage(2); // オカン2号
     }
 
-    // 残り時間をポップアップウィンドウに送信
+    // 残り時間をポップアップウィンドウに表示させる
     chrome.runtime.sendMessage({ action: "updateCountdown", remainingTime });
 
     remainingTime--;
@@ -32,7 +31,6 @@ function startTimer(duration) {
 }
 
 function showImage(imageNumber) {
-  // アクティブなタブを取得して画像を表示するメッセージを送信
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     chrome.tabs.sendMessage(tabs[0].id, { action: "showImage", imageNumber });
   });
