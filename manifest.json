@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "オカンですよ",
-  "version": "4.8",
+  "version": "5.1",
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
