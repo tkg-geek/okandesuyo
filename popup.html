@@ -6,49 +6,49 @@
     <script src="popup.js" defer></script>
     <style>
       body {
-        width: 200px; /* ポップアップの幅を指定 */
+        width: 200px;
         font-family: Arial, sans-serif;
         margin: 10px;
         padding: 0;
         display: flex;
-        flex-direction: column; /* 縦に並べる */
-        align-items: center; /* 中央揃え */
+        flex-direction: column;
+        align-items: center;
       }
       h1 {
-        font-size: 20px; /* ヘッダーのサイズを調整 */
-        text-align: center; /* ヘッダーを中央揃え */
+        font-size: 20px;
+        text-align: center;
       }
       .input-group {
         display: flex;
-        justify-content: center; /* 中央揃え */
-        margin-bottom: 10px; /* 各入力欄の下にマージンを追加 */
-        width: 100%; /* グループの幅を100%に */
+        justify-content: center;
+        margin-bottom: 10px;
+        width: 100%;
       }
       label {
-        margin-right: 5px; /* ラベルと入力欄の間にスペースを追加 */
+        margin-right: 5px;
       }
       input[type="number"] {
-        width: 50px; /* 入力欄の幅を指定 */
-        margin-left: 5px; /* ラベルとの間隔を設定 */
+        width: 50px;
+        margin-left: 5px;
       }
       #start {
         display: block;
-        margin: 10px auto; /* ボタンを中央揃え */
-        padding: 10px 20px; /* パディングを設定 */
-        background-color: #e468d8; /* 薄い紫色の背景 */
-        color: #fff; /* テキストの色を黒に設定 */
-        border: none; /* ボーダーを削除 */
-        border-radius: 5px; /* 角を丸く */
-        cursor: pointer; /* カーソルをポインタに */
-        font-size: 16px; /* フォントサイズを調整 */
-        transition: background-color 0.3s; /* ホバー時のトランジション */
+        margin: 10px auto;
+        padding: 10px 20px;
+        background-color: #e468d8;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
       }
       #start:hover {
-        background-color: #800080; /* ホバー時の濃い紫 */
-        color: white; /* ホバー時のテキスト色を白に */
+        background-color: #800080;
+        color: white;
       }
       #countdown {
-        text-align: center; /* カウントダウンを中央揃え */
+        text-align: center;
       }
     </style>
   </head>
@@ -64,7 +64,7 @@
     </h1>
 
     <div class="input-group">
-      <label for="hours">時間:</label>
+      <label for="hours">時:</label>
       <input type="number" id="hours" min="0" />
     </div>
 
